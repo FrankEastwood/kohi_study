@@ -15,7 +15,7 @@ set compilerFlags=-g -shared -Wvarargs -Wall -Werror
 rem -Wall -Werror
 set includeFlags=-Isrc -I%VULKAN_SDK%/Include
 set linkerFlags=-luser32 -lvulkan-1 -L%VULKAN_SDK%/Lib
-set defines=-D_DEBUG -DKEXPORT -D_CTR_SECURE_NO_WARNINGS
+set defines=-D_DEBUG -DKH_EXPORT -D_CTR_SECURE_NO_WARNINGS
 
 echo "Buildings %assembly%..."
 clang %cFilenames% %compilerFlags% -o ../bin/%assembly%.dll %defines% %includeFlags% %linkerFlags%
